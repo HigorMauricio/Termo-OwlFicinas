@@ -117,14 +117,11 @@ function reinicializarLinha(tentativaAtual) {
     focoDeletar();
 }
 
-// Adiciona o evento para a tecla Enter (verifica se a palavra é correta)
 document.addEventListener('keydown', (e) => {
 	
-    // Verifica se a tecla pressionada foi Enter
     if (e.key === 'Enter') {
         const inputs = document.querySelectorAll(`#L${tentativaAtual} .letra`);
         
-        // Se todas as letras forem digitadas, verifica o status
         if (
 				inputs[0].value !== '' &&
 				inputs[1].value !== '' &&
@@ -133,35 +130,30 @@ document.addEventListener('keydown', (e) => {
 				inputs[4].value !== ''
 			) {
 			
-            // Verifica o status da tentativa
             let status_do_jogo = verificarStatus();
 
-            // Desativa todos os inputs do jogo caso tenha terminado
             if(status_do_jogo){
                 document.querySelectorAll('.letra').forEach(elemento => elemento.disabled = true);
-                return; // PARA O JOGO
+                return; 
             }
 
-            // Se a tentativa atual não for a última, vai para a próxima linha
             if (tentativaAtual < 5) {
                 tentativaAtual++;
-                letraAtual = 0; // Reinicia a coluna
+                letraAtual = 0;
 				reinicializarLinha(tentativaAtual);
                 bloquearInputsClassificados();
-                document.querySelector(`#L${tentativaAtual} .letra`).focus(); // Foca na primeira letra da nova linha
+                document.querySelector(`#L${tentativaAtual} .letra`).focus(); 
             }
         }
     }
 });
 
-// Eventos do Teclado Virtual, criados após o DOM estar completamente carregado
 document.addEventListener('DOMContentLoaded', () => {
     focoInput();
     focoDeletar();
     bloquearInputsClassificados();
     limpar();
 
-    // Acrescentando evento de clique a cada LETRA do teclado virtual
     document.querySelectorAll('.teclado').forEach(botao =>{
         botao.addEventListener('click', () => {
 
@@ -178,11 +170,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ENTER simples
     const enter = document.querySelector('#teclado-do-jogo .enter');
     if (enter) enter.addEventListener('click', () => {
 
-        // Criando um evento que simula o pressionamento da tecla Enter
         const eventoEnter = new KeyboardEvent('keydown', {
             key: 'Enter',
             code: 'Enter',
@@ -194,7 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.dispatchEvent(eventoEnter);        
     });
 
-    // DELETE simples
     const deletar = document.querySelector('#teclado-do-jogo .backspace');
     if (deletar) deletar.addEventListener('click', () => {
 
