@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    background-color: #B81F22;
+    font-family: Mitr, sans-serif;
+}
+
+
+main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+p {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+img {
+  display: inline-block;
+  width: 10%;
+  height: 10%;
+}
+
+.logo_spfc{
+  text-align: center;
+}
+
+.linha {
+  display: flex;
+  gap: 5px; 
+  margin-bottom: 5px;
+}
+
+#teclado-do-jogo {
+	margin-top: 45px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.teclado {
+  width: 50px;
+  height: 40px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+	background-color: rgb(70, 13, 23);
+	border: none; 
+  border-radius: 5px;
+}
+
+.backspace, .enter {
+	background-color: rgb(104, 21, 36);
+	border: none; 
+  border-radius: 5px;
+  padding: 0 16px;
+	color: white;
+	font-size: 1.2rem;
+}
+
+.letra {
+  width: 30px;
+  height: 30px;
+  background-color: transparent; 
+  border: 2px solid rgb(104, 21, 36);
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+.letra.correta {
+  background-color: #6aaa64; 
+  color: white;
+  border-color: #6aaa64;
+}
+
+.letra.presente {
+  background-color: #c9b458; 
+  color: white;
+  border-color: #c9b458;
+}
+
+.letra.ausente {
+  background-color: #787c7e; 
+  color: white;
+  border-color: #787c7e;
+}
+
+.letra.ativas { 
+	background-color: transparent;
+}
+
+.letra.espera {
+	background-color: rgb(70, 13, 23);
+	border-radius: 5px;
+	border: 2px solid rgb(70, 13, 23);
+}
