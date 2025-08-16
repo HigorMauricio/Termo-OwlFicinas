@@ -7,7 +7,7 @@ const estadoDoJogo = [
   ['', '', '', '', ''] 
 ];
 
-const palavraSecreta = ['P', 'R', 'A', 'T', 'O'];
+const palavraSecreta = ['O', 'S', 'C', 'A', 'R'];
 
 let tentativaAtual = 0; 
 
