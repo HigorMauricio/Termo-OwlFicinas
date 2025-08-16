@@ -134,6 +134,10 @@ document.addEventListener('keydown', (e) => {
 
             if(status_do_jogo){
                 document.querySelectorAll('.letra').forEach(elemento => elemento.disabled = true);
+                bloquearInputsClassificados();
+                setTimeout(() => {
+                    window.alert('Você venceu!!! Parabéns');
+                }, 200);
                 return; 
             }
 
