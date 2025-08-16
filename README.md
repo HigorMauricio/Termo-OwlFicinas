@@ -26,5 +26,5 @@ Desenvolvido junto as aulas da Oficina Web da PET, na USP Leste.
 
 ## Link para jogar
 ```
-https://higormauricio.github.io/TermoOwnlFicina/
+https://higormauricio.github.io/Termo-OwlFicinas/
 ```
