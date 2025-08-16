@@ -147,6 +147,15 @@ document.addEventListener('keydown', (e) => {
 				reinicializarLinha(tentativaAtual);
                 bloquearInputsClassificados();
                 document.querySelector(`#L${tentativaAtual} .letra`).focus(); 
+            } else {
+                var divinputs = document.querySelector('div#L5');
+                inputsfinal = divinputs.querySelectorAll('input')
+                inputsfinal.forEach((input) => {
+                    input.disabled = true;
+                })
+                setTimeout(() => {
+                    window.alert('Você perdeu, tente novamente.');
+                }, 200);
             }
         }
     }
